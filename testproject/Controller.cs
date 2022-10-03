@@ -14,6 +14,7 @@ namespace testproject
         public void Loop()
         {
             int cmd;
+            _modelRepository.StartApp();
             do
             {
                 cmd = _uiBuilder.RenderMenu();

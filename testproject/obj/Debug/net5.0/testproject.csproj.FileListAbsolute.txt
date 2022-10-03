@@ -14,3 +14,5 @@ E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.dl
 E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\ref\testproject.dll
 E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.pdb
 E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.genruntimeconfig.cache
+E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\Newtonsoft.Json.dll
+E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.csproj.CopyComplete

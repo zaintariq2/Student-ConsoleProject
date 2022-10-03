@@ -14,14 +14,6 @@ namespace testproject
         Delete,     //6
         Exit        //7
     }
-    class Command
-    {
-        public enum type { Create, ShowDetail, Edit, List, Search, Delete, Exit };
-    }
-    class ListCommand:Command
-    {
-        //string sortBy[ame, age, rollNo...]
-    }
     class Program
     {
         static void Main(string[] args)

@@ -4,21 +4,9 @@
     "SurName": "Tariq",
     "Program": "BSCE",
     "RollNo": "23",
-    "Fee": 2300,
-    "AdmissionDate": null,
-    "DateOfBirth": null,
-    "TotalSubjects": 0,
-    "Subjects": null
-  },
-  {
-    "Name": "Abu",
-    "SurName": "Baka",
-    "Program": "BSEE",
-    "RollNo": "45e",
-    "Fee": 23000,
-    "AdmissionDate": null,
-    "DateOfBirth": null,
-    "TotalSubjects": 0,
-    "Subjects": null
+    "Fee": 25000,
+    "Age": 21,
+    "AdmissionDate": "06/07/2019",
+    "DateOfBirth": "06/02/2018"
   }
 ]

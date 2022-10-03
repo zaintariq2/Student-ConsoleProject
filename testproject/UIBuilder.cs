@@ -39,17 +39,12 @@ namespace testproject
             s1.RollNo = Console.ReadLine();
             Console.WriteLine("Enter Student Fee");
             s1.Fee = Convert.ToInt32(Console.ReadLine());
-            /*Console.WriteLine("Enter Student Admission Date");
+            Console.WriteLine("Enter Student Age");
+            s1.Age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Student Admission Date (format: DD/MM/YYYY)");
             s1.AdmissionDate = Console.ReadLine();
-            Console.WriteLine("Enter Student Date of Birth");
+            Console.WriteLine("Enter Student Date of Birth (format: DD/MM/YYYY)");
             s1.DateOfBirth = Console.ReadLine();
-            Console.WriteLine("Enter Student total subjects");
-            s1.TotalSubjects = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter Student Subjects");
-            for (int i = 0; i<s1.TotalSubjects; i++)
-            {
-                s1.Subjects[i] = Console.ReadLine();
-            }*/
 
             return s1;
         }
@@ -57,33 +52,44 @@ namespace testproject
         {
             Student s1 = new Student();
             Console.WriteLine("\n----------Update Details---------");
-            Console.WriteLine("Enter new Student Name");
+            Console.WriteLine("Enter Student new Name");
             s1.Name = Console.ReadLine();
-            Console.WriteLine("Enter new Student Sur Name");
+            Console.WriteLine("Enter Student new SurName");
             s1.SurName = Console.ReadLine();
-            Console.WriteLine("Enter new Student Program");
+            Console.WriteLine("Enter Student new Program");
             s1.Program = Console.ReadLine();
-            Console.WriteLine("Enter new Student Roll No");
+            Console.WriteLine("Enter Student new Roll No");
             s1.RollNo = Console.ReadLine();
-            Console.WriteLine("Enter new Student Fee");
+            Console.WriteLine("Enter Student new Fee");
             s1.Fee = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Student new Age");
+            s1.Age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Student new Admission Date (format: DD/MM/YYYY)");
+            s1.AdmissionDate = Console.ReadLine();
+            Console.WriteLine("Enter Student new Date of Birth (format: DD/MM/YYYY)");
+            s1.DateOfBirth = Console.ReadLine();
 
             return s1;
         }
         public void RenderStudentDetails(Student s)
         {
-            Console.WriteLine("\n--------Student details--------");
-            Console.WriteLine($"Name of Student {s.Name}");
-            Console.WriteLine($"SurName of Student {s.SurName}");
-            Console.WriteLine($"Program of Student {s.Program}");
-            Console.WriteLine($"Roll No of Student {s.RollNo}");
-            Console.WriteLine($"Fee of Student {s.Fee}");
+            Console.WriteLine("\n--------Student details--------\t");
+            Console.WriteLine($"--------------------------------+");
+            Console.WriteLine($"Name\t\t| {s.Name}\t\t|");
+            Console.WriteLine($"SurName\t\t| {s.SurName}\t\t|");
+            Console.WriteLine($"Program\t\t| {s.Program}\t\t|");
+            Console.WriteLine($"Roll No\t\t| {s.RollNo}\t\t|");
+            Console.WriteLine($"Fee\t\t| {s.Fee}\t\t|");
+            Console.WriteLine($"Age\t\t| {s.Age}\t\t|");
+            Console.WriteLine($"Admission Date\t| {s.AdmissionDate}\t|");
+            Console.WriteLine($"Date of Birth\t| {s.DateOfBirth}\t|");
+            Console.WriteLine($"--------------------------------+");
         }
         public void RenderStudentList (List<Student> students)
         {
             if (students.Count == 0)
             {
-                Console.WriteLine("There are no students in the list");
+                Console.WriteLine("\nThere are no students in the list");
             }
             else
             {
@@ -91,12 +97,18 @@ namespace testproject
                 Console.WriteLine("\n-------Students Details -------");
                 foreach (var student in students)
                 {
-                    Console.WriteLine($"\nDetail of Student {i}");
-                    Console.WriteLine($"Name of Student {student.Name}");
-                    Console.WriteLine($"SurName of Student {student.SurName}");
-                    Console.WriteLine($"Program of Student {student.Program}");
-                    Console.WriteLine($"Roll No of Student {student.RollNo}");
-                    Console.WriteLine($"Fee of Student {student.Fee}");
+                    Console.WriteLine($"\n--------------------------------+");
+                    Console.WriteLine($"Detail of Student: {i}\t\t|");
+                    Console.WriteLine($"--------------------------------+");
+                    Console.WriteLine($"Name\t\t| {student.Name}\t\t|");
+                    Console.WriteLine($"SurName\t\t| {student.SurName}\t\t|");
+                    Console.WriteLine($"Program\t\t| {student.Program}\t\t|");
+                    Console.WriteLine($"Roll No\t\t| {student.RollNo}\t\t|");
+                    Console.WriteLine($"Fee\t\t| {student.Fee}\t\t|");
+                    Console.WriteLine($"Age\t\t| {student.Age}\t\t|");
+                    Console.WriteLine($"Admission Date\t| {student.AdmissionDate}\t|");
+                    Console.WriteLine($"Date of Birth\t| {student.DateOfBirth}\t|");
+                    Console.WriteLine($"--------------------------------+");
                     i++;
                 }
             }

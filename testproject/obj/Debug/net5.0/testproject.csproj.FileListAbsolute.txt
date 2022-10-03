@@ -1,0 +1,16 @@
+E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\testproject.exe
+E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\testproject.deps.json
+E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\testproject.runtimeconfig.json
+E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\testproject.runtimeconfig.dev.json
+E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\testproject.dll
+E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\ref\testproject.dll
+E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\testproject.pdb
+E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.csproj.AssemblyReference.cache
+E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.GeneratedMSBuildEditorConfig.editorconfig
+E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.AssemblyInfoInputs.cache
+E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.AssemblyInfo.cs
+E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.csproj.CoreCompileInputs.cache
+E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.dll
+E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\ref\testproject.dll
+E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.pdb
+E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.genruntimeconfig.cache

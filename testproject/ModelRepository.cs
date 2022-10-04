@@ -40,6 +40,9 @@ namespace testproject
             found.RollNo = s.RollNo;
             found.Program = s.Program;
             found.Fee = s.Fee;
+            found.Age = s.Age;
+            found.AdmissionDate = s.AdmissionDate;
+            found.DateOfBirth = s.DateOfBirth;
             Console.WriteLine("Your student record updated successfully:");
             SaveData(allStudent);
         }

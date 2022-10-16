@@ -46,8 +46,8 @@ namespace testproject
             found.Age = s.Age;
             found.AdmissionDate = s.AdmissionDate;
             found.DateOfBirth = s.DateOfBirth;
-            Console.WriteLine("Your student record updated successfully:");
             SaveData(allStudent);
+            Console.WriteLine("Your student record updated successfully:");
         }
         public List<Student> GetAll()
         {

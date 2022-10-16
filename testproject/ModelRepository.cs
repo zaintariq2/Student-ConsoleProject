@@ -7,6 +7,8 @@ using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
+using System.Xml.Linq;
+using System.Globalization;
 
 namespace testproject
 {
@@ -20,15 +22,16 @@ namespace testproject
         public void AddNew(Student s)
         {
             LoadData();
-            var std = SearchByRollNo(s.RollNo);
+            var std = Search(4, s.RollNo);  // 4 = Search by Roll No
             if (std==null)
             {
                 allStudent.Add(s);
                 SaveData(allStudent);
+                Console.WriteLine("Data is Successfully Saved");
             }
             else
             {
-                Console.WriteLine("Student with this roll no already exists");
+                Console.WriteLine("\nStudent with this roll no already exists");
             }
         }
         public void Update(Student s, string roll)
@@ -51,35 +54,131 @@ namespace testproject
             LoadData();
             return allStudent;
         }
-        public Student SearchByRollNo(string roll)
+        public Student Search(int searchBy, string input)
         {
             LoadData();
             var std = new Student();
-            if (allStudent.Count != 0)
+            switch (searchBy)
             {
-                foreach (var student in allStudent)
-                {
-                    if (roll == student.RollNo)
-                    {
-                        std = student;
-                        break;
-                    }
-                    else
-                    {
-                        std = null;
-                    }
-                }
+                case 1:  // Name
+                    std = allStudent.FirstOrDefault(x => x.Name == input);
+                    break;
+                case 2:  // SurName
+                    std = allStudent.FirstOrDefault(x => x.SurName == input);
+                    break;
+                case 3:  // Program
+                    std = allStudent.FirstOrDefault(x => x.Program == input);
+                    break;
+                case 4:  // RollNo
+                    std = allStudent.SingleOrDefault(x => x.RollNo == input);
+                    break;
+                case 5:  // Age
+                    std = allStudent.FirstOrDefault(x => x.Age == Convert.ToInt32(input));
+                    break;
+                case 6:  // Fee
+                    std = allStudent.FirstOrDefault(x => x.Fee == Convert.ToInt32(input));
+                    break;
+                case 7:  //Admission Date
+                    std = allStudent.FirstOrDefault(x => x.AdmissionDate == Convert.ToDateTime(input));
+                    break;
+                case 8:  // Date of Birth
+                    std = allStudent.FirstOrDefault(x => x.DateOfBirth == Convert.ToDateTime(input));
+                    break;
+                default:
+                    break;
             }
-            else
-            {
-                std = null;
-            }
+
             return std;
         }
-        public List<Student> SortByRollNo(List<Student> itemsToSort)// returns sorted list based on field name in sortBy
+        public List<Student> Sort(int sortBy, int sortInput)// returns sorted list based on field name in sortBy
         {
             LoadData();
-            allStudent.Sort((x, y) => x.RollNo.CompareTo(y.RollNo));
+            var std = new Student();
+            switch(sortBy)
+            {
+                case 1:  // Name
+                    if (sortInput == 1)  // Asce
+                    {
+                        allStudent.Sort((x, y) => x.Name.CompareTo(y.Name));
+                    }
+                    else // Desc
+                    {
+                        allStudent.Sort((x, y) => y.Name.CompareTo(x.Name));
+                    }
+                    break;
+                case 2:  // SurName
+                    if (sortInput == 1)  // Asce
+                    {
+                        allStudent.Sort((x, y) => x.SurName.CompareTo(y.SurName));
+                    }
+                    else  // Desc
+                    {
+                        allStudent.Sort((x, y) => y.SurName.CompareTo(x.SurName));
+                    }
+                    break;
+                case 3:  // Program
+                    if (sortInput == 1)  // Asce
+                    {
+                        allStudent.Sort((x, y) => x.Program.CompareTo(y.Program));
+                    }
+                    else   // Desc
+                    {
+                        allStudent.Sort((x, y) => y.Program.CompareTo(x.Program));
+                    }
+                    break;
+                case 4:  // RollNo
+                    if (sortInput == 1)  // Asce
+                    {
+                        allStudent.Sort((x, y) => x.RollNo.CompareTo(y.RollNo));
+                    }
+                    else   // Desc
+                    {
+                        allStudent.Sort((x, y) => y.RollNo.CompareTo(x.RollNo));
+                    }
+                    break;
+                case 5:  // Age
+                    if (sortInput == 1)  // Asce
+                    {
+                        allStudent.Sort((x, y) => x.Age.CompareTo(y.Age));
+                    }
+                    else   // Desc
+                    {
+                        allStudent.Sort((x, y) => y.Age.CompareTo(x.Age));
+                    }
+                    break;
+                case 6:  // Fee
+                    if (sortInput == 1)  // Asce
+                    {
+                        allStudent.Sort((x, y) => x.Fee.CompareTo(y.Fee));
+                    }
+                    else   // Desc
+                    {
+                        allStudent.Sort((x, y) => y.Fee.CompareTo(x.Fee));
+                    }
+                    break;
+                case 7:  //Admission Date
+                    if (sortInput == 1)  // Asce
+                    {
+                        allStudent.Sort((x, y) => x.AdmissionDate.CompareTo(y.AdmissionDate));
+                    }
+                    else   // Desc
+                    {
+                        allStudent.Sort((x, y) => y.AdmissionDate.CompareTo(x.AdmissionDate));
+                    }
+                    break;
+                case 8:  // Date of Birth
+                    if (sortInput == 1)  // Asce
+                    {
+                        allStudent.Sort((x, y) => x.DateOfBirth.CompareTo(y.DateOfBirth));
+                    }
+                    else  // Desc
+                    {
+                        allStudent.Sort((x, y) => y.DateOfBirth.CompareTo(x.DateOfBirth));
+                    }
+                    break;
+                default:
+                    break;
+            }
             return allStudent;
         }
         public void Delete(string roll)
@@ -110,7 +209,6 @@ namespace testproject
             var options = new JsonSerializerOptions { WriteIndented = true };
             string jsonString = JsonConvert.SerializeObject(stdList, Formatting.Indented);
             File.WriteAllText(fileName, jsonString);
-            Console.WriteLine("Data is Successfully Saved");
         }
     }
 }

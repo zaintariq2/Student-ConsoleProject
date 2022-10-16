@@ -3,7 +3,6 @@ E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\testproject.de
 E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\testproject.runtimeconfig.json
 E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\testproject.runtimeconfig.dev.json
 E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\testproject.dll
-E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\ref\testproject.dll
 E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\testproject.pdb
 E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.csproj.AssemblyReference.cache
 E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,3 +15,5 @@ E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.pd
 E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.genruntimeconfig.cache
 E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\Newtonsoft.Json.dll
 E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\testproject.csproj.CopyComplete
+E:\Work\Solvefy\Training\testproject\testproject\obj\Debug\net5.0\refint\testproject.dll
+E:\Work\Solvefy\Training\testproject\testproject\bin\Debug\net5.0\ConsoleTables.dll
